@@ -35,7 +35,7 @@ class App extends Component {
         <h1 className="Header">React Wars</h1>
         <h2 className="names">{this.state.starwarsChars.map(sec=>{
         console.log(sec)
-        return sec.name+ " "})}</p>
+        return sec.name + " " })} </h2>
       </div>
     );
   }
