@@ -51,8 +51,12 @@ class App extends Component {
                 <p>birth year: {sec.birth_year}</p>
                 <p>height: {sec.height + " units"}</p>
                 <p>gender: {sec.gender}</p>
-                <p>films:{sec.films.length}</p>
-                
+                <p>films: {sec.films.length}</p>
+                {sec.films.map(element => {
+                  
+                  console.log(element,"here" )
+                  return (<a href={element} > movie</a>)
+                })}
               </div>  
               )
             }
