@@ -29,13 +29,23 @@ class App extends Component {
       });
   };
 
+
   render() {
     return (
       <div className="App">
         <h1 className="Header">React Wars</h1>
-        <h2 className="names">{this.state.starwarsChars.map(sec=>{
+        {/* <h2 className="names">{this.state.starwarsChars.map(sec=>{
         console.log(sec)
-        return sec.name + " " })} </h2>
+        return "name: " + sec.name + " " })} </h2> */}
+
+        <h2 className= "names">names</h2>
+        <div>{
+          this.state.starwarsChars.map(sec=>{
+              console.log(sec)
+              return <div className="people"> {sec.name} </div>  
+            }
+          )
+        }</div>
       </div>
     );
   }
