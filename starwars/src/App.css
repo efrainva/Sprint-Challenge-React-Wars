@@ -12,3 +12,11 @@
   flex: wrap;
   flex-direction: column;
 }
+.people{
+  background-color: #443e3e;
+  padding: 15px;
+  margin :10px auto;
+  border-radius: 5px;
+  width:40%;
+  color:white;
+}

@@ -12,6 +12,7 @@ class App extends Component {
   componentDidMount() {
     this.getCharacters('https://swapi.co/api/people/');
   }
+  
 
   getCharacters = URL => {
     // feel free to research what this code is doing.
@@ -38,14 +39,25 @@ class App extends Component {
         console.log(sec)
         return "name: " + sec.name + " " })} </h2> */}
 
-        <h2 className= "names">names</h2>
-        <div>{
+        <div>
+        {
           this.state.starwarsChars.map(sec=>{
               console.log(sec)
-              return <div className="people"> {sec.name} </div>  
+              return (
+              <div className="people">
+                {sec.name}
+                <p>birth year: {sec.birth_year}</p>
+                <p>height: {sec.height + " units"}</p>
+                <p>gender: {sec.gender}</p>
+              </div>  
+              )
             }
           )
-        }</div>
+        }
+
+
+
+        </div>
       </div>
     );
   }
